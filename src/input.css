@@ -3,28 +3,31 @@
 @tailwind utilities;
 
 .container {
-    @apply max-w-[90rem] p-6 w-full mx-auto;
+    @apply max-w-[85rem] w-full mx-auto;
 }
 
 @layer components {
     /* ---------------------------HEADER---------------------------*/
     .header {
-        @apply bg-light shadow-md relative;
+        @apply bg-light relative py-[.7rem] px-[1.5rem];
     }
     .header__navd {
-        @apply hidden md:flex md:gap-8;
+        @apply hidden md:flex md:gap-[2.5rem] md:mr-[3rem];
     }
     .header__navd li a {
         @apply text-purplee text-[1rem];
     }
-    /* .header__navd li a:hover::after {
-        @apply md:hover:bg-purplee md:inline-block;
-    } */
+    .header__navd li a:hover {
+        @apply border-b-[4px] border-purplee;
+    }
     .logom img {
-        @apply md:hidden;
+        @apply w-[12.5rem] h-[3.1rem] md:hidden;
     }
     .header__d {
         @apply md:flex md:items-center md:justify-between hidden;
+    }
+    .header__d img {
+        @apply w-[13.5rem] h-[3.6rem] ml-[2rem];
     }
     .header__navm {
         @apply flex flex-col md:hidden;
@@ -33,16 +36,16 @@
         @apply flex items-center justify-between;
     }
     .header__action {
-        @apply bg-light absolute right-0 top-[6rem] w-0 h-dvh px-0 pt-0 overflow-hidden transition-all shadow-md md:static md:h-fit md:w-fit md:shadow-none border-[2px];
+        @apply bg-light absolute left-0 top-[4.5rem] w-0 h-dvh px-0 pt-0 overflow-hidden transition-all shadow-md md:static md:h-fit md:w-fit md:shadow-none border-[2px];
     }
     .header__action.open {
-        @apply w-screen px-10 transition-all;
+        @apply w-[100%] transition-all;
     }
     .header__action .header__navm {
-        @apply pb-5 flex flex-col md:hidden items-center top-0;
+        @apply pb-5 flex flex-col gap-[2rem] md:hidden items-center top-0 pt-[1rem];
     }
     .header__action .header__navm li a {
-        @apply font-thin text-lg text-purplee py-[.5rem] px-[1.5rem] mb-[4rem] border-b-[2px] hover:bg-purplee hover:text-light;
+        @apply font-thin text-[1rem] text-purplee py-[1.5rem] px-[12.5rem] border-b-[2px] hover:bg-purplee hover:text-light transition-all;
     }
     .header__action .header__navm li {
         @apply leading-10;
@@ -54,64 +57,70 @@
         @apply w-[2.5rem] h-[.5rem] bg-purplee block rounded-full transition-all;
     }
     .burger__menu span:nth-child(2) {
-        @apply my-[.4rem];
+        @apply my-[.5rem];
     }
     .burger__menu.open span:first-child {
         @apply transform translate-y-[10px] rotate-[225deg] transition-all
     }
     .burger__menu.open span:last-child {
-        @apply transform translate-y-[-17px] rotate-[-225deg] transition-all
+        @apply transform translate-y-[-22px] rotate-[-225deg] transition-all
     }
     .burger__menu.open span:nth-child(2) {
         @apply opacity-0 transition-all;
     }
     /* ---------------------------BANNER---------------------------*/
     .banner {
-        @apply bg-gwhite py-[1.5rem] md:py-[3rem];
+        @apply bg-gwhite py-[3rem] px-[2rem] md:pb-[8rem] md:pt-[10rem];
     }
     .banner__wrapper {
         @apply md:grid md:grid-cols-2;
     }
     .banner__left {
-        @apply md:ml-[3rem];
+        @apply ml-[.5rem] md:ml-[4rem];
     }
     .banner h2 {
         @apply text-4xl mb-[1.5rem] md:w-[80%] md:leading-[2.7rem];
     }
     .banner p {
-        @apply text-lg mb-[1.5rem] md:w-[85%];
+        @apply text-lg mb-[1rem] md:w-[85%];
     }
     /* ---------------------------FBS---------------------------*/
     .fbs {
-        @apply bg-light py-[4rem];
+        @apply bg-light py-[5rem] px-[1.5rem];
     }
     .fbs h2 {
         @apply text-4xl text-center;
     }
     .fbs p {
-        @apply text-lg text-center mb-[1.5rem] mt-[1.5rem] md:mb-[2rem] md:w-[65%] md:mx-auto;
+        @apply text-xl text-center mb-[1.5rem] mt-[1.5rem] md:mb-[2rem] md:w-[65%] md:mx-auto;
     }
     .fbs__btn {
         @apply text-center;
     }
     /* ---------------------------OFFER---------------------------*/
     .offer {
-        @apply bg-oBanner bg-no-repeat bg-cover bg-center min-h-[600px] py-[4rem] md:py-[6rem];
+        @apply bg-oBanner bg-no-repeat bg-cover bg-center min-h-[600px] px-[1.5rem] pt-[5rem] pb-[1.5rem] md:py-[6rem];
     }
     .offer__title {
-        @apply text-center mb-[4rem];
+        @apply text-center mb-[3rem];
+    }
+    .offer__titlee {
+        @apply text-center mb-[3rem] md:mb-[1rem];
     }
     .offer h2 {
-        @apply text-center text-light text-4xl mb-[4rem];
+        @apply text-center text-light text-4xl mb-[5rem];
     }
     .offer h3 {
-        @apply text-center text-light text-2xl;
+        @apply text-center text-light text-2xl md:w-[80%] md:text-center md:mx-auto;
     }
     .offer__title i {
-        @apply text-light text-5xl mb-[.5rem];
+        @apply text-light text-6xl mb-[.5rem];
+    }
+    .offer__titlee i {
+        @apply text-light text-6xl mb-[.5rem];
     }
     .offer ul {
-        @apply list-disc list-inside mb-[4rem];
+        @apply list-disc list-inside mb-[5rem];
     }
     .offer ul li {
         @apply text-light text-lg leading-9;
@@ -121,25 +130,25 @@
     }
     /* ---------------------------CLIENT---------------------------*/
     .client {
-        @apply bg-gwhite py-[2rem] md:py-[4rem];
+        @apply bg-gwhite pt-[4rem] pb-[6.75rem] px-[2rem] md:py-[6rem];
     }
     .client h2 {
-        @apply text-center text-4xl mb-[1.5rem] md:mb-[2rem];
+        @apply text-center text-4xl mb-[5rem] md:mb-[4rem];
     }
     .client .pic {
         @apply rounded-full;
     }
     .client img {
-        @apply mb-[1.5rem] md:h-[50%];
+        @apply mb-[.5rem] h-[%] md:h-[50%] mx-auto;
     }
     .client h3 {
         @apply text-center font-medium text-2xl mb-[.2rem];
     }
     .client span {
-        @apply block text-center text-lg font-thin mb-[1.5rem];
+        @apply block text-center text-lg font-thin mb-[2rem];
     }
     .client h4 {
-        @apply text-center text-[1rem];
+        @apply text-center text-[1.1rem];
     }
     .client i {
         @apply text-graay text-9xl;
@@ -148,6 +157,9 @@
         @apply block text-right;
     }
     .client p {
+        @apply text-2xl font-bold text-center w-[93%] mx-auto md:w-[80%] md:mx-auto;
+    }
+    .client .txtjms {
         @apply text-lg font-bold text-center md:w-[80%] md:mx-auto;
     }
     .client__slide {
@@ -156,31 +168,52 @@
     .client__info {
         @apply md:mx-auto;
     }
+    .tns-outer {
+        @apply relative;
+    }
+    .tns-nav {
+        @apply absolute z-10 bottom-[1rem];
+    }
+    .tns-nav button {
+        @apply mx-[1rem] md:w-[15px] md:h-[15px] w-[10px] h-[10px] rounded-full border-none bg-purplee;
+    }
+    .tns-nav-active {
+        @apply bg-lpurplee;
+    }
     /* ---------------------------EVENT---------------------------*/
     .event {
-        @apply py-[2rem] md:py-[4rem];
+        @apply py-[4rem] md:py-[5rem];
     }
     .event h2 {
-        @apply text-center text-4xl mb-[3rem];
+        @apply text-center text-4xl mb-[4rem] md:mb-[2rem];
     }
     .event__cards {
-        @apply md:grid md:grid-cols-3 md:gap-4 md:w-[85%] md:mx-auto;
+        @apply w-[88%] mx-auto md:grid md:grid-cols-3 md:gap-[1.5rem] md:w-[86%] md:mx-auto;
     }
     .event__card {
-        @apply shadow-lg mb-[3rem] pb-[2rem];
+        @apply shadow-lg mt-[3rem] pb-[2.5rem];
+    }
+    .event__card img {
+        @apply h-[13rem];
     }
     .event h3 {
         @apply text-center text-2xl font-semibold mt-[1.5rem] mb-[2rem];
     }
     .event p {
-        @apply text-center text-lg mb-[2rem] w-[80%] mx-auto md:w-[60%];
+        @apply text-center text-xl mb-[2.5rem] w-[85%] mx-auto md:w-[80%];
     }
     .event__btn {
-        @apply text-center;
+        @apply md:mt-[5rem] text-center;
+    }
+    .event__btnt {
+        @apply mt-[5rem] text-center;
+    }
+    .event__btnl {
+        @apply md:mt-[3rem] text-center;
     }
     /* ---------------------------FOOTER---------------------------*/
     .footer {
-        @apply bg-purplee py-[1.5rem] text-light;
+        @apply bg-purplee pt-[.7rem] pb-[5rem] px-[1.5rem] md:pb-[3rem] text-light;
     }
     .footer__wrapper {
         @apply md:grid md:grid-cols-3;
@@ -192,19 +225,25 @@
         @apply text-2xl;
     }
     .footer img {
-        @apply mx-auto;
+        @apply w-[13.5rem] h-[3.6rem] mx-auto;
     }
     .footer__contact {
-        @apply flex gap-2 mb-[.5rem] justify-center md:justify-start md:ml-[1rem];
+        @apply flex gap-1 mb-[.5rem] md:gap-2 justify-center md:justify-start md:ml-[1rem];
     }
     .footer__contact p {
-        @apply text-sm;
+        @apply text-[.8rem] ml-[.1rem] md:ml-0;
     }
+    /* .footer__contacti {
+        @apply md:flex-row flex flex-col gap-2 mb-[.5rem] text-center md:justify-start md:ml-[1rem];
+    }
+    .footer__contacti p {
+        @apply text-sm;
+    } */
     .footer p {
         @apply text-center;
     }
     .footer h4 {
-        @apply text-center mb-[1.5rem];
+        @apply text-center md:mt-0 mb-[1.5rem] mt-[3rem] font-semibold text-[1rem];
     }
     .footer ul li {
         @apply text-center leading-7 text-sm;
@@ -222,50 +261,235 @@
         @apply md:text-left md:ml-[1rem];
     }
     .footer__box:first-child {
-        @apply md:border-r-[1px] md:border-light;
+        @apply md:border-r-[1px] md:border-light md:pl-[3rem];
     }
     .footer__box:nth-child(2) {
         @apply md:border-r-[1px] md:border-light;
     }
     /* ---------------------------BANNER ABOUT---------------------------*/
     .bannerAbout {
-        @apply bg-gwhite py-[1.5rem] md:py-[3rem];
+        @apply bg-gwhite py-[3rem] px-[2rem] md:pb-[8rem] md:pt-[10rem];
     }
     .bannerAbout__wrapper {
         @apply md:grid md:grid-cols-2;
     }
     .bannerAbout__left {
-        @apply md:ml-[3rem];
+        @apply ml-[.5rem] md:ml-[4rem];
     }
     .bannerAbout h2 {
         @apply text-4xl mb-[1.5rem] md:w-[80%] md:leading-[2.7rem];
     }
     .bannerAbout p {
-        @apply text-lg mb-[1.5rem] md:w-[85%];
+        @apply text-lg mb-[1rem] md:w-[85%];
     }
     /* ---------------------------COMPANY---------------------------*/
     .company {
-        @apply bg-light py-[4rem] md:py-[6rem];
+        @apply bg-light py-[5rem] px-[.5rem] md:py-[6rem];
     }
     .company h2 {
-        @apply text-4xl text-center;
+        @apply text-4xl text-center mb-[5rem] md:w-[90%] md:mx-auto;
     }
     .company h3 {
-        @apply text-2xl font-bold text-center mt-[1.5rem] mb-[1.5rem];
+        @apply text-2xl font-bold text-center md:text-left md:ml-[.7rem] mt-[1.5rem] mb-[1.5rem];
     }
     .company p {
-        @apply text-lg text-center;
+        @apply text-lg text-center md:text-left w-[95%] mx-auto;
     }
+    .company__cards {
+        @apply md:grid md:grid-cols-3 md:gap-4 md:w-[85%] md:mx-auto;
+    }
+    .cmp {
+        @apply w-[62%] md:w-[55%] mx-auto md:ml-0;
+    }
+    .cmpb {
+        @apply w-[95%] md:w-[85%] mx-auto;
+    }
+    /* ---------------------------TEAM---------------------------*/
+    .team {
+        @apply bg-gwhite md:pt-[6rem] pt-[5rem];
+    }
+    .tmfbs {
+        @apply md:hidden;
+    }
+    .jj__name h3 {
+        @apply text-lg font-bold mx-[.5rem];
+    }
+    .jeff__name h3 {
+        @apply text-lg font-bold text-center;
+    }
+    .jeff__name h4 {
+        @apply text-center;
+    }
+    .ada__name h3 {
+        @apply text-lg font-bold text-center;
+    }
+    .ada__name h4 {
+        @apply text-center;
+    }
+    .bea__name h3 {
+        @apply text-lg font-bold text-center;
+    }
+    .bea__name h4 {
+        @apply text-center;
+    }
+    .pat__name h3 {
+        @apply text-lg font-bold text-center;
+    }
+    .pat__name h4 {
+        @apply text-center;
+    }
+    .ralph__name h3 {
+        @apply text-lg font-bold text-center;
+    }
+    .ralph__name h4 {
+        @apply text-center;
+    }
+    .michael__name h3 {
+        @apply text-lg font-bold text-center;
+    }
+    .michael__name h4 {
+        @apply text-center;
+    }
+    .team__images {
+        @apply hidden md:flex md:flex-row md:translate-x-[7rem];
+    }
+    .team__images img {
+        @apply grayscale;
+    }
+    .team h2 {
+        @apply text-4xl text-center mb-[2rem];
+    }
+    .team .ttl {
+        @apply text-lg text-center mb-[1.5rem] md:mb-[3rem];
+    }
+    .team__jeff {
+        @apply z-0 w-[100rem] h-full translate-y-[-.3rem];
+    }
+    .team__jeff img {
+        @apply h-[20.5rem] hover:grayscale-0 transition-all;
+    }
+    .team__jeff .jeff__name {
+        @apply opacity-0;
+    }
+    .team__jeff:hover .jeff__name {
+       @apply opacity-100;
+    }
+    .team__ralph {
+        @apply z-0 translate-x-[-18rem] w-[100rem] h-full;
+    }
+    .team__ralph img {
+        @apply h-[20rem] hover:grayscale-0 transition-all;
+    }
+    .team__ralph .ralph__name {
+        @apply opacity-0;
+    }
+    .team__ralph:hover .ralph__name {
+       @apply opacity-100;
+    }
+    .team__ada {
+        @apply z-10 translate-x-[-4rem] translate-y-[1rem] w-[100rem] h-full;
+    }
+    .team__ada img {
+        @apply h-[19rem] hover:grayscale-0 transition-all;
+    }
+    .team__ada .ada__name {
+        @apply opacity-0;
+    }
+    .team__ada:hover .ada__name {
+       @apply opacity-100;
+    }
+    .team__pat {
+        @apply z-10 translate-x-[-14rem] w-[100rem] h-full;
+    }
+    .team__pat img {
+        @apply h-[20.5rem] hover:grayscale-0 transition-all;
+    }
+    .team__pat .pat__name {
+        @apply opacity-0;
+    }
+    .team__pat:hover .pat__name {
+       @apply opacity-100;
+    }
+    .team__jj {
+        @apply z-20 translate-x-[6rem] w-[100rem] h-full;
+    }
+    .team__jj img {
+        @apply h-[20rem] hover:grayscale-0 transition-all transition-all;
+    }
+    .team__jj .jj__name {
+        @apply opacity-0;
+    }
+    .team__jj:hover .jj__name {
+       @apply opacity-100;
+    }
+    .team__bea {
+        @apply z-20 translate-x-[-10rem] translate-y-[2rem] w-[100rem] h-full;
+    }
+    .team__bea img {
+        @apply h-[18rem] hover:grayscale-0 transition-all;
+    }
+    .team__bea .bea__name {
+        @apply opacity-0;
+    }
+    .team__bea:hover .bea__name {
+       @apply opacity-100;
+    }
+    .team__michael {
+        @apply z-20 translate-x-[-24rem] w-[100rem] h-full;
+    }
+    .team__michael img {
+        @apply h-[20rem] hover:grayscale-0 transition-all;
+    }
+    .team__michael .michael__name {
+        @apply opacity-0;
+    }
+    .team__michael:hover .michael__name {
+       @apply opacity-100;
+    }
+    /* ---------------------------CTA---------------------------*/
+    .cta {
+        @apply py-[5rem] z-30 bg-gradient-to-b from-purplee from-10% via-lpurplee via-30% to-purplee to-90% translate-y-[-.5rem];
+    }
+    .cta h2 {
+        @apply text-4xl text-center mb-[1.5rem] text-light;
+    }
+    .cta__btn {
+        @apply text-center;
+    }
+
+    /* ---------------------------PARTNERS---------------------------*/
+    .partners {
+        @apply py-[5rem] px-[.3rem] md:py-[6rem];
+    }
+    .partners h2 {
+        @apply text-4xl text-center mb-[8rem];
+    }
+    .partners__images {
+        @apply flex flex-col md:grid md:grid-cols-3 gap-[5rem] md:w-[75%] md:mx-auto md:mb-[5rem];
+    }
+    .partners__timages {
+        @apply flex flex-col gap-[5rem] md:flex md:flex-row md:w-[55%] md:mx-auto;
+    }
+    .partners__img {
+        @apply mx-auto;
+    }
+    .partners__images .partners__img:last-child {
+        @apply mb-[5rem];
+    }
+
 }
 
 @layer utilities {
     .btn {
-        @apply inline-block p-[1rem] rounded-full border-transparent border-[1px] text-lg font-semibold py-[.7rem] px-[1.5rem];
+        @apply inline-block p-[1rem] rounded-full border-transparent border-[1px] text-lg font-semibold py-[.6rem] px-[1.5rem];
     }
     .btn.bg--purplee {
         @apply text-light bg-purplee hover:text-purplee hover:bg-transparent hover:border-purplee hover:border-[1px];
     }
     .btn.bg--transparent {
         @apply text-purplee bg-transparent border-purplee border-[1px] hover:border-none hover:bg-purplee/15;
+    }
+    .btn.bg--grad {
+        @apply text-light bg-transparent border-light border-[1px] hover:border-none hover:bg-light hover:text-purplee;
     }
 }

@@ -6,11 +6,3 @@ burger.addEventListener("click", () =>{
     headerA.classList.toggle("open");
 })
 
-var slider = tns({
-  container: '.client__slider',
-  items: 1,
-  controls: false,
-  autoplayButtonOutput: false,
-  slideBy: 'page',
-  autoplay: true
-    });
