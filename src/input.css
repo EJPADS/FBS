@@ -15,10 +15,13 @@
         @apply hidden md:flex md:gap-[2.5rem] md:mr-[3rem];
     }
     .header__navd li a {
-        @apply text-purplee text-[1rem];
+        @apply text-purplee text-[1rem] flex flex-col gap-[.6rem] mt-[1rem];
     }
-    .header__navd li a:hover {
-        @apply border-b-[4px] border-purplee;
+    .navd span {
+        @apply bg-purplee block w-full px-[1rem] h-[.4rem] opacity-0 transition-all;
+    }
+    .navd:hover span {
+        @apply opacity-100 transition-all ease-linear;
     }
     .logom img {
         @apply w-[12.5rem] h-[3.1rem] md:hidden;
@@ -39,7 +42,7 @@
         @apply bg-light absolute left-0 top-[4.5rem] w-0 h-dvh px-0 pt-0 overflow-hidden transition-all shadow-md md:static md:h-fit md:w-fit md:shadow-none border-[2px];
     }
     .header__action.open {
-        @apply w-[100%] transition-all;
+        @apply w-[100%] transition-all z-50;
     }
     .header__action .header__navm {
         @apply pb-5 flex flex-col gap-[2rem] md:hidden items-center top-0 pt-[1rem];
@@ -49,6 +52,18 @@
     }
     .header__action .header__navm li {
         @apply leading-10;
+    }
+    .services__links .serv li {
+        @apply bg-purplee hover:bg-lpurplee;
+    }
+    .services__links .serv li a {
+        @apply text-light py-[1.5rem] px-[12.5rem] font-thin text-[1rem] border-none;
+    }
+    .serv {
+        @apply hidden;
+    }
+    .services__links a:hover .serv {
+        @apply block;
     }
     .burger__menu {
         @apply md:hidden;
@@ -133,13 +148,13 @@
         @apply bg-gwhite pt-[4rem] pb-[6.75rem] px-[2rem] md:py-[6rem];
     }
     .client h2 {
-        @apply text-center text-4xl mb-[5rem] md:mb-[4rem];
+        @apply text-center text-4xl mb-[7rem] md:mb-[4rem];
     }
     .client .pic {
         @apply rounded-full;
     }
     .client img {
-        @apply mb-[.5rem] h-[%] md:h-[50%] mx-auto;
+        @apply mb-[.5rem] md:h-[50%] mx-auto;
     }
     .client h3 {
         @apply text-center font-medium text-2xl mb-[.2rem];
@@ -162,22 +177,22 @@
     .client .txtjms {
         @apply text-lg font-bold text-center md:w-[80%] md:mx-auto;
     }
-    .client__slide {
-        @apply md:grid md:grid-cols-2;
+    .client__content {
+        @apply md:grid md:grid-cols-2 md:w-[95%] md:mx-auto;
     }
     .client__info {
         @apply md:mx-auto;
     }
-    .tns-outer {
+    .client .tns-outer {
         @apply relative;
     }
-    .tns-nav {
-        @apply absolute z-10 bottom-[1rem];
+    .client .tns-nav {
+        @apply absolute z-10 bottom-[1rem] md:translate-x-[210%] translate-x-[25%];
     }
-    .tns-nav button {
-        @apply mx-[1rem] md:w-[15px] md:h-[15px] w-[10px] h-[10px] rounded-full border-none bg-purplee;
+    .client button {
+        @apply mx-[.5rem] md:w-[20px] md:h-[20px] w-[15px] h-[15px] rounded-full border-none bg-purplee;
     }
-    .tns-nav-active {
+    .client button.tns-nav-active {
         @apply bg-lpurplee;
     }
     /* ---------------------------EVENT---------------------------*/
@@ -233,12 +248,6 @@
     .footer__contact p {
         @apply text-[.8rem] ml-[.1rem] md:ml-0;
     }
-    /* .footer__contacti {
-        @apply md:flex-row flex flex-col gap-2 mb-[.5rem] text-center md:justify-start md:ml-[1rem];
-    }
-    .footer__contacti p {
-        @apply text-sm;
-    } */
     .footer p {
         @apply text-center;
     }
@@ -306,7 +315,7 @@
     }
     /* ---------------------------TEAM---------------------------*/
     .team {
-        @apply bg-gwhite md:pt-[6rem] pt-[5rem];
+        @apply bg-gwhite md:pt-[6rem] pt-[5rem] md:h-[72vh];
     }
     .tmfbs {
         @apply md:hidden;
@@ -351,7 +360,7 @@
         @apply text-center;
     }
     .team__images {
-        @apply hidden md:flex md:flex-row md:translate-x-[7rem];
+        @apply hidden md:flex md:flex-row md:translate-x-[7rem] relative;
     }
     .team__images img {
         @apply grayscale;
@@ -363,10 +372,10 @@
         @apply text-lg text-center mb-[1.5rem] md:mb-[3rem];
     }
     .team__jeff {
-        @apply z-0 w-[100rem] h-full translate-y-[-.3rem];
+        @apply z-0 absolute translate-x-[11rem] translate-y-[-1rem];
     }
     .team__jeff img {
-        @apply h-[20.5rem] hover:grayscale-0 transition-all;
+        @apply hover:grayscale-0 transition-all;
     }
     .team__jeff .jeff__name {
         @apply opacity-0;
@@ -375,10 +384,10 @@
        @apply opacity-100;
     }
     .team__ralph {
-        @apply z-0 translate-x-[-18rem] w-[100rem] h-full;
+        @apply z-0 translate-x-[48rem] translate-y-[-1.9rem] absolute;
     }
     .team__ralph img {
-        @apply h-[20rem] hover:grayscale-0 transition-all;
+        @apply hover:grayscale-0 transition-all;
     }
     .team__ralph .ralph__name {
         @apply opacity-0;
@@ -387,10 +396,10 @@
        @apply opacity-100;
     }
     .team__ada {
-        @apply z-10 translate-x-[-4rem] translate-y-[1rem] w-[100rem] h-full;
+        @apply z-10 translate-x-[23rem] translate-y-[.3rem] absolute;
     }
     .team__ada img {
-        @apply h-[19rem] hover:grayscale-0 transition-all;
+        @apply hover:grayscale-0 transition-all;
     }
     .team__ada .ada__name {
         @apply opacity-0;
@@ -399,10 +408,10 @@
        @apply opacity-100;
     }
     .team__pat {
-        @apply z-10 translate-x-[-14rem] w-[100rem] h-full;
+        @apply z-10 translate-x-[39rem] translate-y-[-2.2rem] absolute;
     }
     .team__pat img {
-        @apply h-[20.5rem] hover:grayscale-0 transition-all;
+        @apply hover:grayscale-0 transition-all;
     }
     .team__pat .pat__name {
         @apply opacity-0;
@@ -411,10 +420,10 @@
        @apply opacity-100;
     }
     .team__jj {
-        @apply z-20 translate-x-[6rem] w-[100rem] h-full;
+        @apply z-20 translate-x-[6rem] translate-y-[-.4rem] absolute;
     }
     .team__jj img {
-        @apply h-[20rem] hover:grayscale-0 transition-all transition-all;
+        @apply hover:grayscale-0 transition-all;
     }
     .team__jj .jj__name {
         @apply opacity-0;
@@ -423,10 +432,10 @@
        @apply opacity-100;
     }
     .team__bea {
-        @apply z-20 translate-x-[-10rem] translate-y-[2rem] w-[100rem] h-full;
+        @apply z-20 translate-x-[30rem] translate-y-[1.1rem] absolute;
     }
     .team__bea img {
-        @apply h-[18rem] hover:grayscale-0 transition-all;
+        @apply hover:grayscale-0 transition-all;
     }
     .team__bea .bea__name {
         @apply opacity-0;
@@ -435,10 +444,10 @@
        @apply opacity-100;
     }
     .team__michael {
-        @apply z-20 translate-x-[-24rem] w-[100rem] h-full;
+        @apply z-20 translate-x-[55rem] translate-y-[-.4rem] absolute;
     }
     .team__michael img {
-        @apply h-[20rem] hover:grayscale-0 transition-all;
+        @apply hover:grayscale-0 transition-all;
     }
     .team__michael .michael__name {
         @apply opacity-0;
@@ -448,7 +457,7 @@
     }
     /* ---------------------------CTA---------------------------*/
     .cta {
-        @apply py-[5rem] z-30 bg-gradient-to-b from-purplee from-10% via-lpurplee via-30% to-purplee to-90% translate-y-[-.5rem];
+        @apply py-[5rem] z-30 bg-gradient-to-b from-purplee from-10% via-lpurplee via-30% to-purplee to-90% translate-y-0;
     }
     .cta h2 {
         @apply text-4xl text-center mb-[1.5rem] text-light;
@@ -484,12 +493,12 @@
         @apply inline-block p-[1rem] rounded-full border-transparent border-[1px] text-lg font-semibold py-[.6rem] px-[1.5rem];
     }
     .btn.bg--purplee {
-        @apply text-light bg-purplee hover:text-purplee hover:bg-transparent hover:border-purplee hover:border-[1px];
+        @apply text-light bg-purplee hover:text-purplee hover:bg-transparent hover:border-purplee hover:border-[1px] transition-all;
     }
     .btn.bg--transparent {
-        @apply text-purplee bg-transparent border-purplee border-[1px] hover:border-none hover:bg-purplee/15;
+        @apply text-purplee bg-transparent border-purplee border-[1px] hover:border-none hover:bg-purplee/15 transition-all;
     }
     .btn.bg--grad {
-        @apply text-light bg-transparent border-light border-[1px] hover:border-none hover:bg-light hover:text-purplee;
+        @apply text-light bg-transparent border-light border-[1px] hover:border-none hover:bg-light hover:text-purplee transition-all;
     }
 }

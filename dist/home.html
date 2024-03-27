@@ -6,7 +6,10 @@
     <title>FBS - Home</title>
     <link rel="stylesheet" href="/src/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
     <header class="header">
@@ -18,7 +21,16 @@
                     <ul class="header__navm">
                         <li><a href="/dist/home.html">HOME</a></li>
                         <li><a href="/dist/about.html">ABOUT</a></li>
-                        <li><a href="">SERVICES</a></li>
+                        <div class="services__links">
+                            <li><a href="">SERVICES</a></li>
+                            <ul class="serv">
+                                <li><a href="">WEB SOLUTIONS</a></li>
+                                <li><a href="">VIRTUAL ASSISTANT SOLUTIONS</a></li>
+                                <li><a href="">ACCOUNTING SOLUTIONS</a></li>
+                                <li><a href="">LEARNING CENTER SOLUTIONS</a></li>
+                            </ul>
+                        </div>
+                        
                         <li><a href="">CAREERS</a></li>
                         <li><a href="">ACTIVITIES</a></li>
                         <li><a href="">CONTACT</a></li>
@@ -35,13 +47,13 @@
                 <div><img src="/dist/img-home/logo-fbs.png" alt=""></div>
                 <div>
                     <ul class="header__navd">
-                        <li><a href="/dist/home.html">HOME</a></li>
-                        <li><a href="/dist/about.html">ABOUT</a></li>
-                        <li><a href="">SERVICES</a></li>
-                        <li><a href="">CAREERS</a></li>
-                        <li><a href="">ACTIVITIES</a></li>
-                        <li><a href="">CONTACT</a></li>
-                        <li><a href="">PAYMENT</a></li>
+                        <li><a href="/dist/home.html" class="navd">HOME<span></span></a></li>
+                        <li><a href="/dist/about.html" class="navd">ABOUT<span></span></a></li>
+                        <li><a href="" class="navd">SERVICES<span></span></a></li>
+                        <li><a href="" class="navd">CAREERS<span></span></a></li>
+                        <li><a href="" class="navd">ACTIVITIES<span></span></a></li>
+                        <li><a href="" class="navd">CONTACT<span></span></a></li>
+                        <li><a href="" class="navd">PAYMENT<span></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -52,12 +64,13 @@
     <section class="banner">
         <div class="container">
             <div class="banner__wrapper">
-                <div class="banner__left">
+                <div class="banner__left" data-aos="fade-up"
+                data-aos-duration="500">
                     <h2>Excellence in <span class="font-bold">Managed Services</span> and <span class="font-bold">Web Solutions</span></h2>
                     <p>Along with our website design & development solutions (Including website hosting, graphic design, and basic SEO services), FBS meets the needs of clients through recruiting and managing professionals who serve in a wide array of areas like bookkeeping and accounting, virtual assistant and data entry personnel. If you want excellent customer service and a dedicated professional working at a competitive price, we can meet your needs.</p>
                     <a href="" class="btn bg--purplee">OUR SERVICES</a>
                 </div>
-                <img src="/dist/img-home/fbs-banner-bg.png" alt="">
+                <div class="animate__animated animate__fadeInUp"><img src="/dist/img-home/fbs-banner-bg.png" alt=""></div>
             </div>
         </div>
     </section>
@@ -91,7 +104,7 @@
                             <li>Website Redesign</li>
                             <li>Web Hosting & Domain</li>
                             <li>Website Maintenance</li>
-                            <li>online Payment Integration</li>
+                            <li>Online Payment Integration</li>
                             <li>Web-Based Applications</li>
                         </ul>
                     </div>
@@ -144,96 +157,110 @@
                 <h2>Hear what our clients say.</h2>
                 <div class="client__slider">
                     <div class="client__slide">
-                        <div class="client__info">
+                        <div class="client__content">
+                        <div class="client__info" data-aos="fade-right" data-aos-duration="500">
                             <img class="pic" src="/dist/img-home/jamesDavidson-e1685672789528.jpg" alt="">
                             <h3>James Davidson</h3>
                             <span>Managing Director and President</span>
                             <h4>Avant Advisory Group</h4>
                         </div>
-                        <div class="client__msg">
+                        <div class="client__msg" data-aos="fade-left" data-aos-duration="500">
                             <i class="fa-solid fa-quote-left"></i>
                             <p class="txtjms">“Frontline Business Solutions” is beyond an exceptional firm. Professional courtesy, responsiveness, competence, and client service are only a few of the many high level qualities that Frontline’s team exhibit. Frontline exemplifies the golden rule by treating its clients as it would like to be treated. Every Frontline team member  with whom Avant Advisory Group has dealt has been a true blessing.
                                 Finally, based on Avant Advisory Group’s several years of working with Frontline personnel, and especially Mike DeJesus, I can say that they work heartily for their clients as if they are working for the Lord. (Colossians 3:23-24)
                                 Thank you for what you do, Frontline!”</p>
                             <i class="fa-solid fa-quote-right"></i>
                         </div>
+                        </div>
                     </div>
                     <div class="client__slide">
-                        <div class="client__info">
+                        <div class="client__content">
+                        <div class="client__info" data-aos="fade-right" data-aos-duration="500">
                             <img class="pic" src="/dist/img-home/1647905169469.jpg" alt="">
                             <h3>Robert Han</h3>
                             <span>COO/Partner</span>
                             <h4>Twomiles</h4>
                         </div>
-                        <div class="client__msg">
+                        <div class="client__msg" data-aos="fade-left" data-aos-duration="500">
                             <i class="fa-solid fa-quote-left"></i>
                             <p>“FBS is a true partner to our firm. They have help form our vision and trajectory. We are immensely grateful our partnership. Our expectation is to FBS to grow with us. They are an important part of our success. And beyond the business perspective, they are fantastic people. We are blessed to work with them.”</p>
                             <i class="fa-solid fa-quote-right"></i>
                         </div>
+                        </div>
                     </div>
                     <div class="client__slide">
-                        <div class="client__info">
+                        <div class="client__content">
+                        <div class="client__info" data-aos="fade-right" data-aos-duration="500">
                             <img src="/dist/img-home/james_sunderland.png" alt="">
                             <h3>James Sunderland</h3>
                             <span>VP Creative</span>
                             <h4>Over The Top Marketing</h4>
                         </div>
-                        <div class="client__msg">
+                        <div class="client__msg" data-aos="fade-left" data-aos-duration="500">
                             <i class="fa-solid fa-quote-left"></i>
                             <p>“The team at Frontline is incredible. They genuinely care about our needs and share in our vision of success. We are proud to call them a business partner and appreciate all the hard work they do for us.”</p>
                             <i class="fa-solid fa-quote-right"></i>
                         </div>
+                        </div>
                     </div>
                     <div class="client__slide">
-                        <div class="client__info">
+                        <div class="client__content">
+                        <div class="client__info" data-aos="fade-right" data-aos-duration="500">
                             <img src="/dist/img-home/tim-salmonson.png" alt="">
                             <h3>Tim Salmonson</h3>
                             <span>Social Economist</span>
                             <h4>Social Economic Enterprises</h4>
                         </div>
-                        <div class="client__msg">
+                        <div class="client__msg" data-aos="fade-left" data-aos-duration="500">
                             <i class="fa-solid fa-quote-left"></i>
                             <p>There is no better business model.</p>
                             <i class="fa-solid fa-quote-right"></i>
                         </div>
+                        </div>
                     </div>
                     <div class="client__slide">
-                        <div class="client__info">
+                        <div class="client__content">
+                        <div class="client__info" data-aos="fade-right" data-aos-duration="500">
                             <img src="/dist/img-home/jeffrey-seitz.png" alt="">
                             <h3>Jeffrey Seitz</h3>
                             <span>Chief Executive Officer</span>
                             <h4>Phix Genomics</h4>
                         </div>
-                        <div class="client__msg">
+                        <div class="client__msg" data-aos="fade-left" data-aos-duration="500">
                             <i class="fa-solid fa-quote-left"></i>
                             <p>I have worked with a number of different website developers, but none have been as responsive or as quick to turn the work around.</p>
                             <i class="fa-solid fa-quote-right"></i>
                         </div>
+                        </div>
                     </div>
                     <div class="client__slide">
-                        <div class="client__info">
+                        <div class="client__content">
+                        <div class="client__info" data-aos="fade-right" data-aos-duration="500">
                             <img src="/dist/img-home/testi-doodz.png" alt="">
                             <h3>Rhoda Lynn Pessina Dayo</h3>
                             <span>School Directress</span>
                             <h4>Frontline Christian Academy</h4>
                         </div>
-                        <div class="client__msg">
+                        <div class="client__msg" data-aos="fade-left" data-aos-duration="500">
                             <i class="fa-solid fa-quote-left"></i>
                             <p>We enjoyed working together and meeting with the Frontline Business Solutions Staff when they built the website of Frontline Christian Academy.</p>
                             <i class="fa-solid fa-quote-right"></i>
                         </div>
+                        </div>
                     </div>
                     <div class="client__slide">
-                        <div class="client__info">
+                        <div class="client__content">
+                        <div class="client__info" data-aos="fade-right" data-aos-duration="500">
                             <img src="/dist/img-home/ralph-raymund-pinon.png" alt="">
                             <h3>Raymund Pinon</h3>
                             <span>VP Sales and Marketing</span>
                             <h4>Phix Genomics Philippines</h4>
                         </div>
-                        <div class="client__msg">
+                        <div class="client__msg" data-aos="fade-left" data-aos-duration="500">
                             <i class="fa-solid fa-quote-left"></i>
                             <p>Yes, we are pleased to have chosen Frontline Business Solutions as our partner in developing the PHIX Genomics website because you are able to deliver on your promises.</p>
                             <i class="fa-solid fa-quote-right"></i>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -246,15 +273,15 @@
             <div class="event__wrapper">
                 <h2><span class="font-bold">Events</span> and <span class="font-bold">Activities</span></h2>
                 <div class="event__cards">
-                    <div class="event__card">
-                        <img src="/dist/img-home/5th-year-thumb_3.jpg" alt="">
+                    <div class="event__card" data-aos="fade-up" data-aos-duration="500">
+                        <div class="event__img"><img src="/dist/img-home/5th-year-thumb_3.jpg" alt=""></div>
                         <h3>FBS 5th Anniversary</h3>
                         <p>Our 5th-year celebration at Frontline Business Solutions is a special time to look back on…</p>
                         <div class="event__btn">
                             <a href="" class="btn bg--purplee">Read More</a>
                         </div>
                     </div>
-                    <div class="event__card">
+                    <div class="event__card" data-aos="fade-up" data-aos-duration="500">
                         <img src="/dist/img-home/companyRetreat.jpg" alt="">
                         <h3>Company Retreat 2023</h3>
                         <p>Our company retreat at the Rizal Recreational Center in Rizal, Laguna, held from October 20…</p>
@@ -262,7 +289,7 @@
                             <a href="" class="btn bg--purplee">Read More</a>
                         </div>
                     </div>
-                    <div class="event__card">
+                    <div class="event__card" data-aos="fade-up" data-aos-duration="500">
                         <img src="/dist/img-home/HTML-Crash-Course-wide.jpg" alt="">
                         <h3>HTML & CSS3 ONLINE CRASH COURSE FOR BEGINNERS</h3>
                         <p>Are you eager to start your web development journey from scratch? Join us for our…</p>
@@ -332,6 +359,14 @@
 
     <script src="./js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <script>
+        AOS.init();
+
+        new WOW().init();
+    </script>
     <script>
         var slider = tns({
         container: '.client__slider',

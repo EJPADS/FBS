@@ -6,6 +6,9 @@
     <title>FBS - About</title>
     <link rel="stylesheet" href="/src/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
     <header class="header">
@@ -17,7 +20,16 @@
                     <ul class="header__navm">
                         <li><a href="/dist/home.html">HOME</a></li>
                         <li><a href="/dist/about.html">ABOUT</a></li>
-                        <li><a href="">SERVICES</a></li>
+                        <div class="services__links">
+                            <li><a href="">SERVICES</a></li>
+                            <ul class="serv">
+                                <li><a href="">WEB SOLUTIONS</a></li>
+                                <li><a href="">VIRTUAL ASSISTANT SOLUTIONS</a></li>
+                                <li><a href="">ACCOUNTING SOLUTIONS</a></li>
+                                <li><a href="">LEARNING CENTER SOLUTIONS</a></li>
+                            </ul>
+                        </div>
+                        
                         <li><a href="">CAREERS</a></li>
                         <li><a href="">ACTIVITIES</a></li>
                         <li><a href="">CONTACT</a></li>
@@ -34,13 +46,13 @@
                 <div><img src="/dist/img-home/logo-fbs.png" alt=""></div>
                 <div>
                     <ul class="header__navd">
-                        <li><a href="/dist/home.html">HOME</a></li>
-                        <li><a href="/dist/about.html">ABOUT</a></li>
-                        <li><a href="">SERVICES</a></li>
-                        <li><a href="">CAREERS</a></li>
-                        <li><a href="">ACTIVITIES</a></li>
-                        <li><a href="">CONTACT</a></li>
-                        <li><a href="">PAYMENT</a></li>
+                        <li><a href="/dist/home.html" class="navd">HOME<span></span></a></li>
+                        <li><a href="/dist/about.html" class="navd">ABOUT<span></span></a></li>
+                        <li><a href="" class="navd">SERVICES<span></span></a></li>
+                        <li><a href="" class="navd">CAREERS<span></span></a></li>
+                        <li><a href="" class="navd">ACTIVITIES<span></span></a></li>
+                        <li><a href="" class="navd">CONTACT<span></span></a></li>
+                        <li><a href="" class="navd">PAYMENT<span></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -52,12 +64,13 @@
     <section class="bannerAbout">
         <div class="container">
             <div class="bannerAbout__wrapper">
-                <div class="bannerAbout__left">
+                <div class="bannerAbout__left" data-aos="fade-up"
+                data-aos-duration="500">
                     <h2><span class="font-bold">About</span> Us</h2>
                     <p>As a social enterprise company, we are "in business for good." Our commitment is to leverage business success for the good of people and the communities in which we exist. Our vision and mission is successful business that maintains harmony between the three goals of excellent products and services, revenue generation, and positive social impacts.</p>
                     <a href="" class="btn bg--purplee">CONTACT US</a>
                 </div>
-                <img src="/dist/img-about/about-us-540.svg" alt="">
+                <div class="animate__animated animate__fadeInUp"><img src="/dist/img-about/about-us-540.svg" alt=""></div>
             </div>
         </div>
     </section>
@@ -67,18 +80,19 @@
             <div class="company__wrapper">
                 <h2>"<span class="font-bold">Partnering</span> with a <span class="font-bold">company</span> committed to <span class="font-bold">caring</span> about <span class="font-bold">people</span> and <span class="font-bold">community development</span>".</h2>
                 <div class="company__cards">
-                    <div class="company__card">
+                    <div class="company__card" data-aos="fade-right" data-aos-duration="500">
                         <img class="cmp" src="/dist/img-about/vision.svg" alt="">
                         <h3>Vision</h3>
                         <p>To be a globally competitive, premier provider of excellent business solutions, while sustaining a business model that will create positive social impact and make the Philippines an outstanding place to live and work.</p>
                     </div>
-                    <div class="company__card">
+                    <div class="company__card" data-aos="fade-up" data-aos-duration="500">
                         <img class="cmp" src="/dist/img-about/Mission.svg" alt="">
                         <h3>Mission</h3>
                         <p>FBS is a Godly, caring company, committed to holistically equipping its people, developing local talents, providing high client satisfaction and positively impacting the communities in which it exists.</p>
                     </div>
                     <div class="company__card">
                         <img class="cmpb" src="/dist/img-about/Values.svg" alt="">
+                        <div data-aos="fade-left" data-aos-duration="500">
                         <h3>Values</h3>
                         <p>Godly Stewardship</p>
                         <p>Excellence</p>
@@ -88,6 +102,7 @@
                         <p>Teamwork</p>
                         <p>Loving people</p>
                         <p>Fun</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,49 +121,70 @@
                             <h3>Jhonny Dichoso</h3>
                             <h4>Supervisor, IT and LCS</h4>
                         </div>
-                        <img src="/dist/img-about/team-jj.png" alt="">
+                        <img src="/dist/img-about/team-jj.png" alt="" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0" >
                     </div>
                     <div class="team__jeff">
                         <div class="jeff__name">
                             <h3>Jeffrey Pessina</h3>
                             <h4>CEO</h4>
                         </div>
-                        <img src="/dist/img-about/team-jeff.png" alt="">
+                        <img src="/dist/img-about/team-jeff.png" alt="" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0" >
                     </div>
                     <div class="team__ada">
                         <div class="ada__name">
                             <h3>Rhoda Beloso</h3>
                             <h4>HR Manager</h4>
                         </div>
-                        <img src="/dist/img-about/team-ada.png" alt="">
+                        <img src="/dist/img-about/team-ada.png" alt="" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="400"
+     data-aos-offset="0" >
                     </div>
                     <div class="team__bea">
                         <div class="bea__name">
                             <h3>Bhea Del Monte</h3>
                             <h4>Finance Head</h4>
                         </div>
-                        <img src="/dist/img-about/team-bea.png" alt="">
+                        <img src="/dist/img-about/team-bea.png" alt="" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="400"
+     data-aos-offset="0" >
                     </div>
                     <div class="team__pat">
                         <div class="pat__name">
                             <h3>Patrick Reyes</h3>
                             <h4>Supervisor, IT</h4>
                         </div>
-                        <img src="/dist/img-about/team-patrick.png" alt="">
+                        <img src="/dist/img-about/team-patrick.png" alt="" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="500"
+     data-aos-offset="0" >
                     </div>
                     <div class="team__ralph">
                         <div class="ralph__name">
                             <h3>Ralph Acoba</h3>
                             <h4>Operations Manager</h4>
                         </div>
-                        <img src="/dist/img-about/team-ralph.png" alt="">
+                        <img src="/dist/img-about/team-ralph.png" alt="" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="500"
+     data-aos-offset="0" >
                     </div>
                     <div class="team__michael">
                         <div class="michael__name">
                             <h3>Michael De Juses</h3>
                             <h4>Supervisor, VA</h4>
                         </div>
-                        <img src="/dist/img-about/michael.png" alt="">
+                        <img src="/dist/img-about/michael.png" alt="" data-aos="fade-zoom-in"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay="600"
+                        data-aos-offset="0">
                     </div>
                 </div>
 
@@ -293,6 +329,14 @@
     </footer>
 
     <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <script>
+        AOS.init();
+
+        new WOW().init();
+    </script>
     
 
 </body>
